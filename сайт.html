@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менің Студенттік Жолым</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Шапка */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(transparent, #f1f5f9);
+        }
+        .logo { font-size: 5rem; margin-bottom: 20px; }
+        header h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.6rem;
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+        .down-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: 0.3s;
+        }
+        .down-btn:hover { background: white; color: #1e40af; transform: scale(1.1); }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+
+        /* Негізгі бөлім */
+        main {
+            background: #f1f5f9;
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+        .profile-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .card-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .card-header .line {
+            width: 100px;
+            height: 4px;
+            background: #fbbf24;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        .card-body {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+        .photo img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px solid #e0e7ff;
+            object-fit: cover;
+        }
+        .info {
+            flex: 2;
+            min-width: 300px;
+            font-size: 1.1rem;
+        }
+        .info p {
+            margin-bottom: 15px;
+        }
+        .info strong {
+            color: #1e40af;
+        }
+        .about-me {
+            margin-top: 30px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 3rem; }
+            .card-body { flex-direction: column; padding: 30px; }
+            .photo img { width: 220px; height: 220px; }
+        }
+/* Батырманың стилін градиентке ауыстырамыз */
+.gallery-button {
+    display: inline-block;
+    padding: 12px 25px;
+    
+    /* ГРАДИЕНТ ҚОСЫЛҒАН ЖЕР */
+    background-image: linear-gradient(to right, #3b82f6, #1e40af); 
+    
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    border-radius: 8px; /* Бұрыштарын аздап дөңгелектеу */
+    transition: transform 0.3s; 
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+}
+
+/* Батырма үстіне тінтуірді апарғандағы әсер (Hover) */
+.gallery-button:hover {
+    background-image: linear-gradient(135deg, #fbbf24, #d97706); /* Кері градиент */
+    transform: translateY(-2px); /* Аздап көтерілу эффектісі */
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+}
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <div class="container">
+            <div class="logo"</div>
+            <h1>Менің Студенттік Жолым</h1>
+            <p>Өзімнің оқудағы және өмірдегі тәжірибем туралы</p>
+            <a href="#profile" class="down-btn">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="profile-card" id="profile">
+                <div class="card-header">
+                    <h2>Өзім Туралы</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="card-body">
+                    <div class="photo">
+                        <img src="photo.jpg" alt="Сіздің суретіңіз">
+                    </div>
+                    <div class="info">
+                        <p><strong>Аты-жөнім:</strong> Садық Нұрай Жеңісқызы </p>
+                        <p><strong>Университет:</strong> ТарГУ им. М. Х. Дулати</p>
+                        <p><strong>Курс:</strong> 1-курс</p>
+                        <p><strong>Оқу басталған жыл:</strong> 2025 жыл</p>
+
+                        <div class="about-me">
+                            <p>Мен ТарГУ им. М. Х. Дулати оқу орнында Журналистика және репортер ісі мамандығы мамандығы бойынша білім аламын. Оқу мен даму – менің өмірімдегі басты басымдықтар. Менің мақсатым – мамандығым бойынша білікті маман атану және өз еліме пайдалы болу.</p>
+                          
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+ <main>
+        <div class="container">
+            <div class="profile-card" id="profile">
+                <div class="card-header">
+                    <h2>Күрес және күрес түрлері</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="card-body">
+                    <div class="photo">
+                  
+                    </div>
+                   
+                        <div class="about-me">
+                            <p>Күрес – адамзат тарихындағы ең көне спорт түрлерінің бірі. Уақыт өте келе, әр халық өзінің ұлттық ерекшеліктеріне сай күрес түрлерін дамытты. Қазіргі таңда күрестің көптеген түрлері бар, олардың әрқайсысының өзіндік ережелері мен техникалық шектеулері бар .
+Бұл түрлер Бүкіләлемдік Күрес Бірлестігі (UWW) тарапынан танылған және Олимпиада ойындарының бағдарламасына кіреді.</p>
+
+<p>Еркін Күрес - Денеге, аяққа және белден жоғары бөлікке кез келген әдісті қолдануға рұқсат етіледі.</p>
+<p>Грек-Рим Күресі - Тек белден жоғары дене бөлігімен жұмыс істеуге рұқсат етіледі. Аяқты ұстауға және оны әдістерге пайдалануға тыйым салынады.</p>
+<p>Самбо - Ресейде пайда болған және көптеген ұлттық күрес түрлерін біріктірген. Көбіне күрт лақтырулар мен ұстаулар қолданылады.</p>
+<p>Қазақша күрес – қазақ халқының ежелгі мәдени мұрасы. Бұл күрес түрінде белдік немесе шалбардың бел тұсын ұстап күресу басты ерекшелік болып табылады.</p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+ <main>
+        <div class="container">
+            <div class="profile-card" id="profile">
+                <div class="card-header">
+                    <h2>Қазақша күрестің маңызы</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="card-body">
+                  
+
+                        <div class="about-me">
+                            <p>Дене бітімді дамытады</p>
+<p>Шыдамдылық пен күшті арттырады</p>
+<p>Тәртіпке үйретеді</p>
+<p>Психикалық тұрақтылық береді</p>
+<p>Жауапкершілікті арттырады</p>
+<p>Өзіне деген сенімділік қалыптастырады сосын</p>
+<p>Күрестің пайдасы Жылдамдықты, ептілікті арттырады</p>
+<p>Бұлшық еттерді күшейтеді Тыныс алу жүйесін жақсартады</p>
+<p>Иммунитетті күшейтеді</p>
+<p>Зиянды әдеттерден сақтайды </p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+ <main>
+        <div class="container">
+            <div class="profile-card" id="profile">
+                <div class="card-header">
+                    <h2>Өзім Туралы</h2>
+                    <div class="line"></div>
+                </div>
+<div class="card-body">
+                  
+
+                        <div class="about-me">
+              <p>Қазақ күресінен алған жетістіктерім – менің ұлттық спортқа деген адалдығымның дәлелі:</p>
+
+<p>1-Орын, Аудандық Ашық Турнир: 2022 жылы Жамбыл ауданы әкімдігінің ұйымдастыруымен өткен Қазақ күресінен кіші жасөспірімдер арасындағы турнирде Бас жүлдені (1-орынды) жеңіп алдым. Бұл жеңіс менің кәсіби спортшы ретінде қалыптасуымдағы маңызды қадам болды</p>.
+
+<p>3-Орын, Облыс Чемпионаты: 2023 жылы Тараз қаласында өткен Қазақ күресінен кіші жасөспірімдер арасындағы Жамбыл облысының чемпионатында 60 кг салмақ дәрежесінде қола медальді (3-орынды) иелендім. Бұл нәтиже облыс деңгейіндегі бәсекелестіктегі шеберлігімді дәлелдеді.</p>
+
+<p>1-Дәрежелі Диплом, Республикалық Жарыс: Қазақстан Республикасы Білім және Ғылым министрлігінің "Ұлттық ғылыми-практикалық дене тәрбиесі орталығы" ұйымдастырған мектеп оқушылары арасындағы республикалық жарыста 1-дәрежелі дипломмен марапатталдым. Бұл марапат күрестен бөлек, жалпы спорттағы үздік дайындығымды көрсетеді.</p>
+
+                          <div class="container">
+          
+               
+                    <h2><div class="gallery-container">
+    <a href="photogallery.html" class="gallery-button">
+        ФОТОГАЛЕРЕЯҒА ӨТУ
+    </a>
+</div></h2>
+        
+                </div>
+<div class="card-body">
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менің Студенттік Жолым</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+   
+            color: ;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Шапка */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(transparent, #f1f5f9);
+        }
+        .logo { font-size: 5rem; margin-bottom: 20px; }
+        header h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.6rem;
+            max-width: 800px;
+            margin-bottom: 50px;
+               @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+
+        /* Негізгі бөлім */
+        main {
+            background: #f1f5f9;
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+        .profile-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .card-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .card-header .line {
+            width: 100px;
+            height: 4px;
+            background: #fbbf24;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        .card-body {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+        .photo img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px solid #e0e7ff;
+            object-fit: cover;
+        }
+        .info {
+            flex: 2;
+            min-width: 300px;
+            font-size: 1.1rem;
+        }
+        .info p {
+            margin-bottom: 15px;
+        }
+        .info strong {
+            color: #1e40af;
+        }
+        .about-me {
+            margin-top: 30px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 3rem; }
+            .card-body { flex-direction: column; padding: 30px; }
+            .photo img { width: 220px; height: 220px; }
+        }
+/* Батырманың стилін градиентке ауыстырамыз */
+.gallery-button {
+    display: inline-block;
+    padding: 12px 25px;
+    
+    /* ГРАДИЕНТ ҚОСЫЛҒАН ЖЕР */
+    background-image: linear-gradient(to right, #3b82f6, #1e40af); 
+    
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    border-radius: 8px; /* Бұрыштарын аздап дөңгелектеу */
+    transition: transform 0.3s; 
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+}
+
+/* Батырма үстіне тінтуірді апарғандағы әсер (Hover) */
+.gallery-button:hover {
+    background-image: linear-gradient(135deg, #fbbf24, #d97706); /* Кері градиент */
+    transform: translateY(-2px); /* Аздап көтерілу эффектісі */
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+}
+    </style>
+</head>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото галерея</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 баған */
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .description {
+            padding: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .description h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+        }
+
+        .description p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Мобильді құрылғылар үшін */
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 баған */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr; /* 1 баған */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <div class="container">
+            <div class="logo"</div>
+            <h1>ФОТОГАЛЕРЕЯ</h1>
+        
+            <a href="#profile" class="down-btn">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+
+
+    <div class="gallery">
+        <!-- 1-ші фото -->
+        <div class="gallery-item">
+            <img src="diploma_1_2022.jpg" alt="Фото 1">
+            <div class="description">
+                <h3>🏆 2022 жыл, Қазақ күресінен Аудандық турнирдегі 1-орын</h3>
+               
+            </div>
+        </div>
+
+        <!-- 2-ші фото -->
+        <div class="gallery-item">
+            <img src="diploma_2_2023.jpg" alt="Фото 2">
+            <div class="description">
+                <h3>Мектеп оқушылар арасындағы республикалық жарыста 1-орын</h3>
+             
+            </div>
+        </div>
+
+        <!-- 3-ші фото -->
+        <div class="gallery-item">
+            <img src="diploma_3_2023.jpg" alt="Фото 3">
+            <div class="description">
+                <h3>🥉 2023 жыл, 60 кг салмақ дәрежесіндегі Облыс чемпионатының 3-орыны.</h3>
+               
+            </div>
+        </div>
+
+        <!-- Қосымша фотолар қосқыңыз келсе осы жерге қосыңыз -->
+    </div>
+
+</body>
+</html>
